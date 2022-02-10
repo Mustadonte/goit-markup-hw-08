@@ -68,11 +68,16 @@ a {
 }
 
 .container {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
 }
 
 .container-activity {
@@ -102,44 +107,18 @@ a {
   border-bottom: 1px solid #ececec;
 }
 
-.header__container {
-  display: flex;
-  align-items: center;
-  justify-content: unset;
-  padding-top: 24px;
-  padding-bottom: 24px;
-}
-
-.header-contacts-list {
-  display: flex;
-  margin-left: auto;
-}
-
-.header-contacts-list__item--margin:not(:first-child) {
-  margin-left: 50px;
-}
-
-.nav-icon {
-  margin-right: 10px;
-  fill: currentColor;
+@media screen and (min-width: 480px) {
+  .header {
+    width: 480px;
+  }
 }
 
 .nav-contacts {
-  display: flex;
-  align-items: center;
-  justify-content: unset;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
-  transition-property: color;
-  transition-duration: var(--primary-trans-duration);
-  transition-timing-function: var(--primary-cubic);
-}
-
-.nav-contacts:hover, .nav-contacts:focus {
-  color: var(--accent-color);
 }
 
 .nav {
@@ -191,16 +170,19 @@ a {
 }
 
 .sec-hero {
-  max-width: 1600px;
-  max-height: 600px;
+  width: 480px;
+  height: 400px;
   margin: 0 auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding: 118px 60px;
   background-color: #c4c4c4;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/Hero_mob_1x.jpg);
+  background-size: 480px 400px;
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  background-color: #c4c4c4;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/Hero_mob_1x.jpg);
+  background-size: 480px 400px;
 }
 
 .hero {
@@ -210,7 +192,7 @@ a {
 
 .hero__title {
   font-weight: 900;
-  font-size: 44px;
+  font-size: 26px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
@@ -245,15 +227,14 @@ a {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 0;
 }
 
 .section-title {
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .section--activity-padding {
@@ -265,24 +246,22 @@ a {
 }
 
 .features-list {
-  display: flex;
-  flex-direction: row;
+  width: 100%;
 }
 
 .features-list__item {
-  width: 270px;
+  max-width: 100vw;
 }
 
 .features-list__item--margin:not(:last-child) {
-  margin-right: 30px;
+  margin-bottom: 30px;
 }
 
 .features-list__icon-bg {
-  width: 270px;
-  height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  height: auto;
+  padding: 25px 0;
+  text-align: center;
   background-color: var(--third-bgc);
 }
 
@@ -306,6 +285,12 @@ a {
 .features-list__desc {
   line-height: 1.71;
   color: var(--secondary-text-color);
+}
+
+@media screen and (max-width: 768px) {
+  .activity {
+    display: none;
+  }
 }
 
 .act-list {
@@ -343,12 +328,11 @@ a {
 }
 
 .team-section-list {
-  display: flex;
   margin-top: 50px;
 }
 
 .team-section-list__item {
-  width: calc((100% - 90px) / 4);
+  width: 100%;
   background-color: var(--primary-bgc);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -363,18 +347,18 @@ a {
   padding-top: 30px;
 }
 
-.team-cards--wrap__name {
+.team-card__name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: var(--primary-letter-spacing);
 }
 
-.team-cards--wrap__name--margin {
+.team-card__name--margin {
   margin-bottom: 10px;
 }
 
-.team-cards--wrap__position {
+.team-card__position {
   font-size: 16px;
   line-height: 1.19;
   color: var(--secondary-text-color);
@@ -382,7 +366,9 @@ a {
 
 .socials {
   display: flex;
-  margin: 16px 32px 30px 32px;
+  justify-content: center;
+  margin-top: 16px;
+  margin-bottom: 24px;
 }
 
 .socials___item--margin:not(:last-child) {
@@ -429,22 +415,23 @@ a {
 
 .clients-list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .clients-list__item {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: calc((100% - 150px) / 6);
+  width: calc((100% - 30px) / 2);
 }
 
-.clients-list__item--margin:not(:last-child) {
+.clients-list__item--margin:nth-child(odd) {
   margin-right: 30px;
 }
 
 .clients-list__link {
   display: block;
-  padding: 16px 32px;
+  width: 100%;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   transition-property: color, border;
@@ -459,6 +446,8 @@ a {
 }
 
 .clients-list__icon {
+  display: block;
+  margin: 0 auto;
   width: 106px;
   height: 60px;
   fill: var(--primary-sm-icon-fill);
@@ -473,15 +462,20 @@ a {
 }
 
 .footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0;
   background-color: var(--secondary-bgc);
 }
 
-.footer__flex {
-  display: flex;
-  align-items: baseline;
-  justify-content: unset;
+.footer__container {
+  text-align: center;
+}
+
+@media screen and (min-width: 1600px) {
+  .footer__container {
+    display: flex;
+    align-items: baseline;
+    justify-content: unset;
+  }
 }
 
 .footer-adress-list {
@@ -522,7 +516,7 @@ a {
 }
 
 .footer-sm--wrap {
-  margin-left: 70px;
+  margin-top: 60px;
 }
 
 .footer-sm__title {
@@ -535,7 +529,9 @@ a {
 
 .footer-sm-list {
   display: flex;
+  justify-content: center;
   margin-top: 20px;
+  margin-bottom: 60px;
 }
 
 .footer-sm-list__item:not(:last-child) {
@@ -565,19 +561,16 @@ a {
   fill: #fff;
 }
 
-.footer-form {
-  margin-left: auto;
-}
-
 .footer-form__email-sub {
+  width: 100%;
   height: 50px;
-  width: 358px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   color: var(--third-text-color);
   padding-left: 16px;
+  margin-bottom: 20px;
 }
 
 .footer-form__email-sub--label {
@@ -590,9 +583,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  display: inline-block;
   padding: 0;
-  margin-left: 12px;
+  margin: 0 auto;
 }
 
 .footer-form__btn-icon {

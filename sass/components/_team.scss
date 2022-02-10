@@ -1,10 +1,9 @@
 .team-section-list {
-  display: flex;
   margin-top: 50px;
 }
 
 .team-section-list__item {
-  width: calc((100% - 90px) / 4);
+  width: 100%;
   background-color: var(--primary-bgc);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -18,7 +17,9 @@
 .team-cards--wrap {
   text-align: center;
   padding-top: 30px;
+}
 
+.team-card {
   &__name {
     font-weight: 500;
     font-size: 16px;
@@ -38,7 +39,9 @@
 
 .socials {
   display: flex;
-  margin: 16px 32px 30px 32px;
+  justify-content: center;
+  margin-top: 16px;
+  margin-bottom: 24px;
 
   &___item--margin:not(:last-child) {
     margin-right: 10px;
