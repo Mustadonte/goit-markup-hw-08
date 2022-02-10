@@ -1,30 +1,26 @@
 .nav {
-  display: flex;
   align-items: center;
 
   &__list {
-    display: flex;
-    margin-left: 93px;
   }
 
   &__item:not(:last-child) {
-    margin-right: 50px;
+    margin-bottom: 32px;
   }
 
   &__link {
     display: block;
-    position: relative;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 40px;
+    line-height: 1.175;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
-    @include trans(color);
+    // @include trans(color);
+  }
 
-    &:hover,
-    &:focus {
-      color: var(--accent-color);
-    }
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
   }
 
   &__current {
