@@ -1,0 +1,38 @@
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header__container {
+  @include centeredflex();
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.header-contacts-list {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-contacts-list__item--margin:not(:first-child) {
+  margin-left: 50px;
+}
+
+.nav-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.nav-contacts {
+  @include centeredflex();
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
+  @include trans(color);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}

@@ -1,0 +1,41 @@
+.features-list {
+  display: flex;
+  flex-direction: row;
+
+  &__item {
+    width: 270px;
+  }
+
+  &__item--margin:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__icon-bg {
+    width: 270px;
+    height: 120px;
+    @include centeredflex($horisontal: center);
+    background-color: var(--third-bgc);
+  }
+
+  &__icon-bg--margin {
+    margin-bottom: 30px;
+  }
+
+  &__icon {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+.features-list__subject {
+  font-weight: 700;
+  font-size: var(--primary-font-size);
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.features-list__desc {
+  line-height: 1.71;
+  color: var(--secondary-text-color);
+}

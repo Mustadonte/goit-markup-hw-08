@@ -1,0 +1,17 @@
+@mixin trans($property) {
+  transition-property: $property;
+  transition-duration: var(--primary-trans-duration);
+  transition-timing-function: var(--primary-cubic);
+}
+
+@mixin centeredflex($flex: flex, $vertical: center, $horisontal: unset) {
+  display: $flex;
+  align-items: $vertical;
+  justify-content: $horisontal;
+}
+
+@mixin bg-properties($bgr: no-repeat, $bgs: cover, $bgp: center) {
+  background-repeat: $bgr;
+  background-size: $bgs;
+  background-position: $bgp;
+}

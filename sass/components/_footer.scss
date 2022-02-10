@@ -1,0 +1,132 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--secondary-bgc);
+
+  &__flex {
+    @include centeredflex($vertical: baseline);
+  }
+}
+
+.footer-adress-list {
+  font-style: normal;
+  letter-spacing: 0.03em;
+  line-height: 1.71;
+  &--margin {
+    margin-top: 20px;
+  }
+
+  &__item {
+    line-height: 1.71;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.footer-adress {
+  display: block;
+
+  &__link {
+    color: var(--third-text-color);
+  }
+
+  &__contacts {
+    color: #ffffff99;
+    @include trans(color);
+    &:hover,
+    &:focus {
+      color: var(--third-text-color);
+    }
+  }
+}
+
+.footer-sm {
+  &--wrap {
+    margin-left: 70px;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    color: var(--third-text-color);
+    text-transform: uppercase;
+  }
+}
+
+.footer-sm-list {
+  display: flex;
+  margin-top: 20px;
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__link {
+    width: 44px;
+    height: 44px;
+    @include centeredflex($horisontal: center);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    @include trans(background-color);
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color);
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+  }
+}
+
+.footer-form {
+  margin-left: auto;
+  &__email-sub {
+    height: 50px;
+    width: 358px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    color: var(--third-text-color);
+    padding-left: 16px;
+    &--label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+  }
+  &__btn-position {
+    @include centeredflex($horisontal: center);
+    display: inline-block;
+    padding: 0;
+    margin-left: 12px;
+  }
+
+  &__btn-icon {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+    margin-left: 10px;
+  }
+}
+
+.footer-form__email-sub--label {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  color: var(--third-text-color);
+  text-transform: uppercase;
+}
+
+.footer-form__email-input::placeholder {
+  font-size: 16px;
+  line-height: 1.16;
+  letter-spacing: var(--primary-letter-spacing);
+  color: rgba(255, 255, 255, 0.6);
+}
