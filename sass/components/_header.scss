@@ -1,16 +1,18 @@
 .header {
   border-bottom: 1px solid #ececec;
 
-  @media screen and (min-width: $mobile) {
-    width: 480px;
+  @include tel {
+    max-width: 480px;
+  }
+
+  @include tab {
+    max-width: 768px;
   }
 }
 
-.nav-contacts {
-  // @include centeredflex();
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--secondary-text-color);
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 21px;
+  padding-bottom: 21px;
 }

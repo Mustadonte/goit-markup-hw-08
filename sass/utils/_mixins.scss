@@ -22,7 +22,7 @@
   }
 }
 
-@mixin tad {
+@mixin tab {
   @media screen and (min-width: $tablet) {
     @content;
   }

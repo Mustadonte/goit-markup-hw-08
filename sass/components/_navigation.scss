@@ -1,26 +1,35 @@
+.normal-menu {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
 .nav {
+  display: flex;
   align-items: center;
 
   &__list {
+    display: flex;
   }
 
   &__item:not(:last-child) {
-    margin-bottom: 32px;
+    margin-right: 50px;
   }
 
   &__link {
     display: block;
+    position: relative;
     font-weight: 500;
-    font-size: 40px;
-    line-height: 1.175;
+    font-size: 14px;
+    line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
-    // @include trans(color);
-  }
+    @include trans(color);
 
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
   }
 
   &__current {
@@ -34,11 +43,28 @@
     width: 100%;
     height: 4px;
     position: absolute;
-    margin-top: 28px;
     top: 100%;
     left: 50%;
+    margin-top: 28px;
     transform: translate(-50%);
     background-color: var(--accent-color);
     border-radius: 2px;
+  }
+}
+
+.nav-contacts {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
+}
+
+.header-contacts-list {
+  &__item {
+    & + & {
+      margin-top: 10px;
+    }
   }
 }

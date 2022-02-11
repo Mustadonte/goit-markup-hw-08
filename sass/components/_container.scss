@@ -7,12 +7,10 @@
   @include tel {
     width: 480px;
   }
-}
 
-.header__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include tab {
+    width: 768px;
+  }
 }
 
 .container-activity {
