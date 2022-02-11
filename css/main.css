@@ -113,6 +113,7 @@ a {
 .header__container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-top: 21px;
   padding-bottom: 21px;
 }
@@ -595,8 +596,13 @@ a {
   width: calc((100% - 30px) / 2);
 }
 
-.clients-list__item--margin:nth-child(odd) {
-  margin-right: 30px;
+@media screen and (max-width: 767px) {
+  .clients-list__item--margin:nth-child(2n + 1) {
+    margin-right: 30px;
+  }
+  .clients-list__item--margin:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
+  }
 }
 
 .clients-list__link {
