@@ -21,8 +21,15 @@
 <body>
   <!-- -------- Шапка -------- -->
   <header>
-
-    <!----------------- Normal menu ----------------->
+    <div class="mobile-header container">
+      <a href="index.html" class="logo">Web<span class="nav__logo">Studio</span></a>
+      <button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+          <use href="./images/svg/symbol-defs.svg#icon-menu"></use>
+        </svg>
+      </button>
+    </div>
+    <!----------------- Navigation ----------------->
 
     <div class="normal-menu">
       <div class="container header__container">
@@ -63,18 +70,14 @@
     </div>
     <!----------------- Mobile menu ----------------->
 
-    <div class="menu-container js-menu-container" id="mobile-menu">
-      <a href="index.html" class="logo">Web<span class="nav__logo">Studio</span></a>
-      <button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-        <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-          <use href="./images/svg/symbol-defs.svg#icon-menu"></use>
-        </svg>
-      </button>
-      <button type="button" class="menu-toggle js-close-menu">
-        <svg width="40" height="40">
-          <use href="./images/svg/symbol-defs.svg#icon-close"></use>"
-        </svg>
-      </button>
+    <div class="js-menu-container container" id="mobile-menu">
+      <div class="mobile-header-wrapper">
+        <button type="button" class="menu-toggle js-close-menu">
+          <svg width="40" height="40">
+            <use href="./images/svg/symbol-defs.svg#icon-close"></use>"
+          </svg>
+        </button>
+      </div>
       <nav class="mobile-nav">
         <ul class="mobile-nav__list">
           <li class="mobile-nav__item">

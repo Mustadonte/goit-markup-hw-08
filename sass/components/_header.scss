@@ -1,18 +1,27 @@
-.header {
-  border-bottom: 1px solid #ececec;
+// .header {
 
-  @include tel {
-    max-width: 480px;
-  }
+//   @include tel {
+//     max-width: 480px;
+//   }
 
-  @include tab {
-    max-width: 768px;
-  }
-}
+//   @include tab {
+//     max-width: 768px;
+//   }
+// }
 
 .header__container {
   display: flex;
   justify-content: space-between;
   padding-top: 21px;
   padding-bottom: 21px;
+}
+
+.mobile-header {
+  @include centeredflex($horisontal: space-between);
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @include tab {
+    display: none;
+  }
 }
