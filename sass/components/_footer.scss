@@ -4,12 +4,22 @@
 
   &__container {
     text-align: center;
-    @media screen and (min-width: $desktop) {
-      @include centeredflex($vertical: baseline);
+    @include tab {
+    }
+    @include desk {
+      @include centeredflex($vertical: baseline, $horisontal: space-around);
     }
   }
 }
 
+.footer-tablet {
+  @media screen and (min-width: 768px), (max-width: 1199px) {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    margin-bottom: 60px;
+  }
+}
 .footer-adress-list {
   font-style: normal;
   letter-spacing: 0.03em;
@@ -47,6 +57,10 @@
 .footer-sm {
   &--wrap {
     margin-top: 60px;
+    @include desk {
+      margin-left: 70px;
+      margin-top: 12px;
+    }
   }
 
   &__title {
@@ -98,17 +112,35 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     color: var(--third-text-color);
     padding-left: 16px;
-    margin-bottom: 20px;
+
+    @include tab {
+      width: 450px;
+      margin-bottom: 20px;
+    }
+
+    @include desk {
+      width: 358px;
+      margin-bottom: 0;
+    }
+
     &--label {
       display: block;
       font-size: 14px;
       margin-bottom: 20px;
+      @include desk {
+        text-align: left;
+      }
     }
   }
   &__btn-position {
-    @include centeredflex($horisontal: center);
-    padding: 0;
+    display: block;
     margin: 0 auto;
+    @include desk {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 0 12px;
+    }
   }
 
   &__btn-icon {

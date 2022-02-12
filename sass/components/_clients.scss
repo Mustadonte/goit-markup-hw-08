@@ -6,6 +6,13 @@
     @include centeredflex($horisontal: center);
     width: calc((100% - 30px) / 2);
 
+    @include tab {
+      width: calc((100% - 2 * 30px) / 3);
+    }
+
+    @include desk {
+      width: calc((100% - 5 * 30px) / 6;
+    }
     @media screen and (max-width: 767px) {
       &--margin:nth-child(2n + 1) {
         margin-right: 30px;
@@ -13,6 +20,26 @@
 
       &--margin:not(:nth-last-child(-n + 2)) {
         margin-bottom: 30px;
+      }
+    }
+
+    @include tab {
+      &--margin:not(:nth-child(3n + 3)) {
+        margin-right: 30px;
+      }
+
+      &--margin:nth-child(-n + 3) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @include desk {
+      &--margin:not(:last-child) {
+        margin-right: 30px;
+      }
+      
+       &--margin:nth-child(-n + 3) {
+        margin-bottom: 0;
       }
     }
   }

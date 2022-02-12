@@ -20,7 +20,7 @@
   @include tab {
     max-width: 768px;
     height: 400px;
-    margin: auto;
+    margin: 0 auto;
     padding: 118px 204px;
     background-color: #c4c4c4;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
@@ -34,11 +34,32 @@
       background-size: 768px 400px;
     }
   }
+
+  @include desk {
+    max-width: 1600px;
+    height: 600px;
+    padding-top: 200px;
+    background-color: #c4c4c4;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../../images/Hero_desk_1x.jpg);
+    background-size: 1600px 600px;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-color: #c4c4c4;
+      background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../../images/Hero_desk_2x.jpg);
+      background-size: 1600px 600px;
+    }
+  }
 }
 
 .hero {
   text-align: center;
   color: var(--third-text-color);
+  @include desk {
+    width: 696px;
+    margin: 0 auto;
+  }
 
   &__title {
     font-weight: 900;
@@ -47,6 +68,10 @@
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+
+    @include desk {
+      font-size: 44px;
+    }
   }
 
   &__btn {

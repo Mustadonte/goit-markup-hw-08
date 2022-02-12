@@ -1,5 +1,10 @@
 .team-section-list {
   margin-top: 50px;
+
+  @include tab {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .team-section-list__item {
@@ -9,8 +14,27 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 
-  &--margin:not(:last-child) {
-    margin-right: 30px;
+  @include tab {
+    width: calc((100% - 30px) / 2);
+
+    &--margin:nth-child(odd) {
+      margin-right: 30px;
+    }
+
+    &--margin:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include desk {
+    width: calc((100% - 3 * 30px) / 4);
+    &--margin:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 0;
+    }
+
+    &--margin:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 
