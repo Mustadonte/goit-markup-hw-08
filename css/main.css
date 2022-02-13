@@ -528,6 +528,7 @@ body.modal-open {
 }
 
 .features-list {
+  justify-content: center;
   width: 100%;
 }
 
@@ -1217,7 +1218,7 @@ body.modal-open {
   align-items: center;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .policy__checkbox-label {
     font-size: 11px;
   }
