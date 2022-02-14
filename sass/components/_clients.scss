@@ -45,8 +45,9 @@
   }
 
   &__link {
-    display: block;
+    @include centeredflex ($horisontal: center);
     width: 100%;
+    padding: 16px 0;
     border: 1px solid #afb1b8;
     border-radius: 4px;
     transition-property: color, border;
